@@ -36,10 +36,6 @@ line.link {
   stroke: #9ecae1;
   stroke-width: 1.5px;
 }
-#visualization {
-  width:950px;
-  height:400px;
-}
     </style>
   </head>
   <body>
@@ -82,7 +78,7 @@ line.link {
         w = parseInt(Math.sqrt(total) * 30, 10);
         h = parseInt(Math.sqrt(total) * 30, 10);
         // create a new CodeFlower
-        currentCodeFlower = new CodeFlower("#visualization", w, h).update(json);
+        currentCodeFlower = new CodeFlower("#visualization", 700, 700).update(json);
       };
 
       d3.json('data/mycelial.json', createCodeFlower);
