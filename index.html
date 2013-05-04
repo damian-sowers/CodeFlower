@@ -10,46 +10,38 @@
     <link href='http://fonts.googleapis.com/css?family=Rosario:400,700' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
     <style type="text/css">
-circle.node {
-  cursor: pointer;
-  stroke: #000;
-  stroke-width: .5px;
-}
+      circle.node {
+        cursor: pointer;
+        stroke: #000;
+        stroke-width: .5px;
+      }
 
-circle.node.directory {
-  stroke: #9ecae1;
-  stroke-width: 2px;
-}
+      circle.node.directory {
+        stroke: #9ecae1;
+        stroke-width: 2px;
+      }
 
-circle.node.collapsed {
-  stroke: #555;
-}
+      circle.node.collapsed {
+        stroke: #555;
+      }
 
-.nodetext {
-  fill: #252929;
-  font-weight: bold;
-  text-shadow: 0 0 0.2em white;
-}
+      .nodetext {
+        fill: #252929;
+        font-weight: bold;
+        text-shadow: 0 0 0.2em white;
+      }
 
-line.link {
-  fill: none;
-  stroke: #9ecae1;
-  stroke-width: 1.5px;
-}
+      line.link {
+        fill: none;
+        stroke: #9ecae1;
+        stroke-width: 1.5px;
+      }
     </style>
   </head>
   <body>
     <div class="content">
       <div class="container">
-        <h1>Mycelial Source code visualization using Codeflower and D3.js</h1>
-        <!-- <form class="form-inline">
-          <fieldset>
-          <label>Example projects from GitHub:</label>
-          <select id="project">
-            <option value="data/mycelial.json">Mycelial</option>
-          </select>
-          </fieldset>
-        </form> -->
+        <h1>Mycelial Source code visualization using CodeFlower and D3.js</h1>
         <div id="visualization"></div>
         <form id="jsonInput" style="display:none">
         <fieldset>
@@ -78,28 +70,10 @@ line.link {
         w = parseInt(Math.sqrt(total) * 30, 10);
         h = parseInt(Math.sqrt(total) * 30, 10);
         // create a new CodeFlower
-        currentCodeFlower = new CodeFlower("#visualization", 700, 700).update(json);
+        currentCodeFlower = new CodeFlower("#visualization", w, h).update(json);
       };
 
       d3.json('data/mycelial.json', createCodeFlower);
-
-      // document.getElementById('project').addEventListener('change', function() {
-      //   d3.json(this.value, createCodeFlower);
-      // });
-      // document.getElementById('jsonInput').addEventListener('submit', function(e) {
-      //   e.preventDefault();
-      //   document.getElementById('visualization').scrollIntoView();
-      //   var json = JSON.parse(document.getElementById('jsonData').value);
-      //   currentCodeFlower.update(json);
-      // });
-      // document.getElementById('jsonConverter').addEventListener('submit', function(e) {
-      //   e.preventDefault();
-      //   var origin = this.children[0].children[0].value;
-      //   var data = this.children[0].children[1].value;
-      //   var json = convertToJSON(data, origin);
-      //   document.getElementById('visualization').scrollIntoView();
-      //   createCodeFlower(json);
-      // });
     </script>
   </body>
 </html>
