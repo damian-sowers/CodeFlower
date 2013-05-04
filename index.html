@@ -8,7 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Rosario:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40381255-1']);
+      _gaq.push(['_setDomainName', 'appraptor.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     <style type="text/css">
       circle.node {
         cursor: pointer;
@@ -40,9 +55,13 @@
   </head>
   <body>
     <div class="content">
-      <div class="container">
+      <div class="container" style="text-align:center">
+        <div style="margin-top:40px; ">
+          <a class="brand" href="http://www.appraptor.com"><span class="brand_first">App</span>Raptor</a> <span class="experiment">Playground</span> 
+          <hr>
+        </div>
         <h1>Mycelial source code visualization using CodeFlower and D3.js</h1>
-        <p style="margin-top:-40px; font-size:16px">The codeflower shows the structure and lines of code for my <a href="http://www.mycelial.com">Mycelial</a> Rails Application. More of my work can be seen here: <a href="http://www.appraptor.com">AppRaptor</a>.</p>
+        <p style="margin-top:-40px; font-size:16px">The codeflower shows the structure and lines of code for my <a href="http://www.mycelial.com">Mycelial</a> Rails Application. Code is Art. <br/> More of my work can be seen here: <a href="http://www.appraptor.com">AppRaptor</a>.</p>
         <div id="visualization"></div>
         <form id="jsonInput" style="display:none">
         <fieldset>
